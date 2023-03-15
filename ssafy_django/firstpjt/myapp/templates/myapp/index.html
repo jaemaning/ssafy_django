@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content1 %}
+    <ul>
+        <li><a href={% url 'myapp:profile' %}>Profile</a></li>
+        <li><a href={% url 'myapp:fruits' %}>Fruits</a></li>
+        <li><a href={% url 'myapp:templates' %}>Templates</a></li>
+        <li><a href={% url 'myapp2:hello' 'ssafy' %}>ssafy</a></li>
+    </ul>
+{% endblock content1 %}
+

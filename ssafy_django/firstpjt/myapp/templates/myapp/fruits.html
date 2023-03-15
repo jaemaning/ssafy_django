@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content1 %}
+
+    <h1>My fruits</h1>
+
+    <ol>
+        {% for fruit in fruits %}
+            {% if fruit == "melon" %}
+            <li>my favorite : {{fruit}}</li>
+            {% else %}
+            <li>{{fruit}}</li>
+            {% endif %}
+        {% endfor %}
+    </ol>
+
+    <p>{{fruits|length}}</p>
+    <p>{{fruits|join:", "}}</p>
+
+{% endblock content1 %}
+
