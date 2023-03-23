@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>index</h1>
+<a class='btn btn-primary' href="{% url 'articles:create' %}">글 작성하러 가기</a>
+<img class='w-50' src="{% static 'articles/cat.png' %}" alt="">
+<hr>
+{% for article in articles %}
+    <p>글번호 : {{article.pk}}</p>
+    <a href="{% url 'articles:detail' article.pk %}">글제목 : {{article.title}}</a>
+    <p>글내용 : {{article.content}}</p>
+    <hr>
+{% endfor %}
+
+{% endblock content %}
